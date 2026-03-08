@@ -594,7 +594,7 @@
   dependencies:
     tslib "^2.8.0"
 
-"@tauri-apps/api@2.10.1", "@tauri-apps/api@^2.10.1":
+"@tauri-apps/api@2.10.1", "@tauri-apps/api@^2.0.0", "@tauri-apps/api@^2.10.1":
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/@tauri-apps/api/-/api-2.10.1.tgz#57c1bae6114ec33d977eb2b50dfefc25fa84fc93"
   integrity sha512-hKL/jWf293UDSUN09rR69hrToyIXBb8CjGaWC7gfinvnQrBVvnLr08FeFi38gxtugAVyVcTa5/FD/Xnkb1siBw==
@@ -1429,6 +1429,11 @@ cose-base@^2.2.0:
   integrity sha512-AzlgcsCbUMymkADOJtQm3wO9S3ltPfYOFD5033keQn9NJzIbtnZj+UdBJe7DYml/8TdbtHJW3j58SOnKhWY/5g==
   dependencies:
     layout-base "^2.0.0"
+
+create-web-stream@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/create-web-stream/-/create-web-stream-1.1.2.tgz#65485ea8691135484f11afa81ce8ce54259e847c"
+  integrity sha512-qtdh7eHXm5ityhyXhMGU1Jm7Wb49pLWo8OZsLGEm4Wf2sXADQXkouQxt6Pq4C8y3O0XyIVGf0Jun4ZbelxytoA==
 
 cross-spawn@^7.0.6:
   version "7.0.6"
@@ -2542,6 +2547,14 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+tauri-plugin-android-fs-api@^27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/tauri-plugin-android-fs-api/-/tauri-plugin-android-fs-api-27.1.0.tgz#7e73204003479f1a585d21952356b29f88ce555f"
+  integrity sha512-ghK1dUQwf/NXQwN/XptKc0jkJ2lCSsO5VROPwR3IoFZWth/IfK5PT9tV3AwnqiDAI7JkCkswgt5WdvdPrW9Ztw==
+  dependencies:
+    "@tauri-apps/api" "^2.0.0"
+    create-web-stream "^1.1.1"
 
 tauri-plugin-m3@0.3.1:
   version "0.3.1"
