@@ -3,6 +3,14 @@
 		"header": "Welcome to Ampersand!",
 		"start": "Start your journey!"
 	},
+	"dataLocationScreen" : {
+		"header" : "Where do you want to store your data?",
+		"optionTextAppData" : "App Data Folder (Default)",
+		"optionTextAppDataDetail" : "Store data in a protected folder only accessible to this app",
+		"optionTextExternalFolder" : "External Folder",
+		"optionTextExtternalFolderDetail" : "Store data in a folder of your choice. This allows you to use cloud storage to sync between devices. If you select this option, you will be asked to select which folder to save to on the next screen",
+		"selectFolderButtonText" : "Select Folder"
+	},
 	"importScreen": {
 		"header": "Would you want to import your data?",
 		"prevInstall": "Yes, previous installation",

@@ -22,6 +22,10 @@ export type AppConfig = {
 		journal?: string,
 		assetManager?: string,
 		customFields?: string
+	},
+	datastorageLocation: {
+		type : string,
+		storageUri : string | null
 	}
 };
 

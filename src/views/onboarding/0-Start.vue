@@ -3,8 +3,16 @@
 	import AccessibilityMD from "@material-symbols/svg-600/outlined/accessibility_new.svg";
 	import AmpersandLogo from "../../assets/ampersand_logo.svg";
 	import { slideAnimation } from "../../lib/util/misc";
+	import { type } from "@tauri-apps/plugin-os";
 
 	const router = useIonRouter();
+async function start() {
+	if (type() === "ios") {
+		router.replace('/onboarding/import');
+	} else {
+		router.replace('/onboarding/datalocation');
+	}
+}
 </script>
 
 <template>
@@ -14,7 +22,7 @@
 				<h1>{{ $t("onboarding:welcomeScreen.header") }}</h1>
 				<IonIcon class="logo" :icon="AmpersandLogo" />
 
-				<IonButton @click="router.replace('/onboarding/import/', slideAnimation)">
+				<IonButton @click="start", slideAnimation)">
 					{{ $t("onboarding:welcomeScreen.start") }}
 				</IonButton>
 

@@ -20,6 +20,10 @@ const defaultAppConfig: AppConfig = {
 	defaultFilterQueries: {
 		members: "@archived:no",
 		messageBoard: "@archived:no"
+	},
+	datastorageLocation : {
+		type : "appdata",
+		storageUri : null
 	}
 };
 
