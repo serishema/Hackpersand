@@ -8,9 +8,9 @@
 	const router = useIonRouter();
 async function start() {
 	if (type() === "ios") {
-		router.replace('/onboarding/import');
+		router.replace('/onboarding/import',slideAnimation);
 	} else {
-		router.replace('/onboarding/datalocation');
+		router.replace('/onboarding/datalocation',slideAnimation);
 	}
 }
 </script>
@@ -22,7 +22,7 @@ async function start() {
 				<h1>{{ $t("onboarding:welcomeScreen.header") }}</h1>
 				<IonIcon class="logo" :icon="AmpersandLogo" />
 
-				<IonButton @click="start", slideAnimation)">
+				<IonButton @click="start">
 					{{ $t("onboarding:welcomeScreen.start") }}
 				</IonButton>
 
