@@ -1,0 +1,36 @@
+// currently this image cannot build for windows
+// todo: add the stuff for cross compiling for windows with xcargo. 
+{
+	"name": "Tauri-app-dev",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/rust:1": { "targets" : "aarch64-linux-android"},
+		"ghcr.io/devcontainers-community/features/llvm:3": {},
+		"ghcr.io/nordcominc/devcontainer-features/android-sdk:1": {"platform" : "36", "extra_packages": "ndk;29.0.14206865"},
+		"ghcr.io/Evit15/devcontainer-features/adb-fastboot:1": {},
+		"ghcr.io/ttyrho/devcontainer-features/gcc:1": {},
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
+	},
+
+    // persistent cargo cache. This will improve performance. 
+	"mounts": [
+		{
+			"source": "devcontainer-cargo-cache-${devcontainerId}",
+			"target": "/usr/local/cargo",
+			"type": "volume"
+		}
+	],
+
+	// do additional set up for building tauri apps for android and Debian Linux.  
+	"onCreateCommand": "sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file libxdo-dev libssl-dev libayatana-appindicator3-dev  librsvg2-dev && rustup target add x86_64-linux-android",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Vue.volar",
+				"rust-lang.rust-analyzer"
+			]
+		}
+	}
+}
